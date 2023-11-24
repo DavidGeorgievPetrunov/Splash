@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextViewTopTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="top|center"
+        android:text="@string/app_logo_top"
+        android:textColor="@color/logo_color"
+        android:textSize="@dimen/logo_size" />
+
+    <TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical|center_horizontal">
+
+            <ImageView
+                android:id="@+id/ImageView2_Left"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/brown_square"
+                android:contentDescription="@string/todo"
+                android:layout_gravity="center_vertical|center_horizontal" />
+
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:id="@+id/ImageView2_Right"
+
+                android:layout_margin="10dp"
+                android:src="@drawable/red_square"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal">
+
+            <ImageView
+                android:id="@+id/ImageView3_Left"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/yellow_square"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical|center_horizontal" />
+
+            <ImageView
+                android:id="@+id/ImageView3_Right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/orange_square"
+                tools:ignore="ImageContrastCheck" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/TextViewBottomTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_logo_bottom"
+        android:textColor="@color/logo_color"
+        android:textSize="@dimen/logo_size" />
+
+    <TextView
+        android:id="@+id/TextViewBottomVersion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/version_bkgrd"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/version_spacing"
+        android:text="@string/app_version_info"
+        android:textColor="@color/version_color"
+        android:textSize="@dimen/version_size" />
+</LinearLayout>
