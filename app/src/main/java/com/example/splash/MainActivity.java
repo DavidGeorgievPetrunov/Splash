@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         TextView logo1 = findViewById(R.id.TextViewTopTitle);
         TextView logo2 = findViewById(R.id.TextViewBottomTitle);
 
-        Animation fade1 = AnimationUtils.loadAnimation(this, R  .anim.fade_in);
+        Animation fade1 = AnimationUtils.loadAnimation(this, R.anim.custom_anim);
         logo1.startAnimation(fade1);
         logo2.startAnimation(fade1);
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-        }, 2000);
+        }, 4000);
 
     }
 }
