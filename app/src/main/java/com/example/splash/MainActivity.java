@@ -1,16 +1,15 @@
 package com.example.splash;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,19 +33,27 @@ public class MainActivity extends AppCompatActivity {
             row.setLayoutAnimation(controller);
         }
 
-        new Handler().postDelayed(new Runnable() {
+        Animation fade2 = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        fade2.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void run() {
-                // Ensure UI-related operations are on the main thread
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        setContentView(R.layout.activity_main);
-                    }
-                });
-            }
-        }, 4000);
+            public void onAnimationStart(Animation animation) {
 
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                startActivity(new Intent(MainActivity.this, MainActivity2.class));
+                MainActivity.this.finish();
+            }
+
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        logo2.startAnimation(fade2);
     }
 
     @Override
